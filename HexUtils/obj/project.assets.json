@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "Assembly-CSharp/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Assembly-CSharp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Assembly-CSharp.dll": {}
+        }
+      },
+      "Assembly-CSharp-Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Assembly-CSharp": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Assembly-CSharp-Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Assembly-CSharp-Editor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Assembly-CSharp/1.0.0": {
+      "type": "project",
+      "path": "../Assembly-CSharp.csproj",
+      "msbuildProject": "../Assembly-CSharp.csproj"
+    },
+    "Assembly-CSharp-Editor/1.0.0": {
+      "type": "project",
+      "path": "../Assembly-CSharp-Editor.csproj",
+      "msbuildProject": "../Assembly-CSharp-Editor.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "Assembly-CSharp >= 1.0.0",
+      "Assembly-CSharp-Editor >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\WillOtterbein\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "G:\\Unity\\Learning\\UnityHexGridTesting\\HexUtils\\HexUtils.csproj",
+      "projectName": "HexUtils",
+      "projectPath": "G:\\Unity\\Learning\\UnityHexGridTesting\\HexUtils\\HexUtils.csproj",
+      "packagesPath": "C:\\Users\\WillOtterbein\\.nuget\\packages\\",
+      "outputPath": "G:\\Unity\\Learning\\UnityHexGridTesting\\HexUtils\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\WillOtterbein\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "G:\\Unity\\Learning\\UnityHexGridTesting\\Assembly-CSharp-Editor.csproj": {
+              "projectPath": "G:\\Unity\\Learning\\UnityHexGridTesting\\Assembly-CSharp-Editor.csproj"
+            },
+            "G:\\Unity\\Learning\\UnityHexGridTesting\\Assembly-CSharp.csproj": {
+              "projectPath": "G:\\Unity\\Learning\\UnityHexGridTesting\\Assembly-CSharp.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
