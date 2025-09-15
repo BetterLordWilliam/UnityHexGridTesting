@@ -49,22 +49,24 @@ public static class HexMath
 
     public static float InnerRadius(float hexSize)
     {
-        return OuterRadius(hexSize) * 0.866025404f;
+        return hexSize * 0.866025404f;
     }
 
     public static Vector3 GetHexCorner(float hexSize, int cornerIndex, HexOrientation orientation)
     {
+        Vector3 corner;
         float angle = cornerIndex * 60f;
+
         if (orientation == HexOrientation.POINTY_TOP)
         {
             angle += 30f;
         }
 
-        return new Vector3(
-            hexSize * Mathf.Cos(Mathf.Deg2Rad * angle),
-            0f,
-            hexSize * Mathf.Sin(Mathf.Deg2Rad * angle)
-        );
+        corner.x = hexSize * Mathf.Cos(Mathf.Deg2Rad * angle);
+        corner.y = 0f;
+        corner.z = hexSize * Mathf.Sin(Mathf.Deg2Rad * angle);
+
+        return corner;
     }
 
     public static Vector3[] GetHexCorners(float hexSize, HexOrientation orientation)
@@ -91,9 +93,9 @@ public static class HexMath
     public static Vector3 GetHexCenter(float hexSize, int x, int z, HexOrientation orientation)
     {
         Vector3 point;
-        if (orientation == HexOrientation.FLAT_TOP)
+        if (orientation == HexOrientation.POINTY_TOP)
         {
-            point.x = (x + z * 0.5f - z / 2) * (InnerRadius(hexSize) / 2f);     // Determine offset by even or odd row
+            point.x = (x + z * 0.5f - z / 2) * (InnerRadius(hexSize) * 2f);     // Determine offset by even or odd row
             point.y = 0f;
             point.z = z * (OuterRadius(hexSize) * 1.5f);
         }
@@ -101,7 +103,7 @@ public static class HexMath
         {
             point.x = x * (OuterRadius(hexSize) * 1.5f);
             point.y = 0f;
-            point.z = (z + x * 0.5f - x / 2) * (InnerRadius(hexSize) / 2f);     // Determine offset by even or odd row
+            point.z = (z + x * 0.5f - x / 2) * (InnerRadius(hexSize) * 2f);     // Determine offset by even or odd row
         }
         return point;
     }
