@@ -3,17 +3,24 @@ using UnityEngine;
 
 public class HexGrid : MonoBehaviour
 {
+
+    [SerializeField]
+    public bool DrawGizmos;
+
+    [SerializeField]
+    public HexOrientation HexOrientation;
+
     [SerializeField]
     public int Width, Height;
 
     [SerializeField]
     public float HexSize;
 
-    [SerializeField]
-    public HexOrientation HexOrientation;
-
     void OnDrawGizmos()
     {
+        if (!DrawGizmos)
+            return;
+
         for (int z = 0; z < Height; z++)
         {
             for (int x = 0; x < Width; x++)

@@ -361,10 +361,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c92efbddcc54ab4681375c1de61a92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Width: 8
-  Height: 10
+  Width: 100
+  Height: 100
   HexSize: 10
-  HexOrientation: 0
+  HexOrientation: 1
+  DrawGizmos: 1
 --- !u!4 &1978753699
 Transform:
   m_ObjectHideFlags: 0
